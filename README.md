@@ -18,7 +18,7 @@ pnpm install --no-frozen-lockfile
 
 ### 步驟二：建立插件資料夾並放入檔案
 
-在 Equicord 專案根目錄下，進入 `src/` 資料夾，手動建立以下資料夾結構：
+在 Vencord 專案根目錄下，進入 `src/` 資料夾，手動建立以下資料夾結構：
 
 ```
 src/
