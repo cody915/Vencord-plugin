@@ -1,14 +1,14 @@
 # AntiMuteDeafen
 
-> 自動解除伺服器閉麥與耳機的 Vencord 插件
+> A Vencord plugin that automatically reverts server-imposed mutes and deafens.
 
-當你被管理員強制閉麥或耳機時，若你擁有足夠權限，插件將立即自動解除。若無權限則不進行任何操作。
+If a server administrator forces you to be muted or deafened, this plugin will instantly unmute/undeafen you, provided you have the necessary permissions. If you lack the required permissions to modify your own state, the plugin will take no action.
 
 ---
 
-## 安裝教學
+## Installation Guide
 
-### 步驟一：Clone 專案並安裝依賴
+### Step 1: Clone the Repository and Install Dependencies
 
 ```bash
 git clone https://github.com/Vendicated/Vencord
@@ -16,9 +16,9 @@ cd Vencord
 pnpm install --no-frozen-lockfile
 ```
 
-### 步驟二：建立插件資料夾並放入檔案
+### Step 2: Create the Plugin Folder and Add Files
 
-在 Vencord 專案根目錄下，進入 `src/` 資料夾，手動建立以下資料夾結構：
+Inside the Vencord project root, navigate to the `src/` directory and manually create the following folder structure:
 
 ```
 src/
@@ -27,46 +27,43 @@ src/
         └── index.ts
 ```
 
-1. 在 `src/` 內建立 `userplugins` 資料夾（若不存在）
-2. 在 `userplugins/` 內建立 `antiMuteDeafen` 資料夾
-3. 將 `index.ts` 檔案放入 `antiMuteDeafen/` 資料夾中
+1. Create the `userplugins` folder inside `src/` (if it doesn't already exist).
+2. Create the `antiMuteDeafen` folder inside `userplugins/`.
+3. Place your `index.ts` file inside the `antiMuteDeafen/` folder.
 
-目錄結構必須如下：
+The directory structure **must** look like this:
+`src/userplugins/antiMuteDeafen/index.ts`
 
-```
-src/userplugins/antiMuteDeafen/index.ts
-```
-
-### 步驟三：打包並注入 Discord
+### Step 3: Build and Inject into Discord
 
 ```bash
 pnpm build
 pnpm inject
 ```
 
-### 步驟四：啟用插件
+### Step 4: Enable the Plugin
 
-重啟 Discord 後，前往 **設定 → Plugins**，找到 **AntiMuteDeafen** 並啟用。
+Restart Discord, then navigate to **Settings → Plugins**. Search for **AntiMuteDeafen** and toggle it on.
 
-插件設定面板提供兩個獨立開關：
+The plugin settings panel provides two independent toggles:
 
-| 選項 | 說明 | 預設 |
-|------|------|------|
-| Anti Mute | 被伺服器閉麥時自動解除 | 開啟 |
-| Anti Deafen | 被伺服器耳機時自動解除 | 開啟 |
-
----
-
-## ⚠️ 警告
-
-本插件會自動化使用者操作，**違反 Discord 服務條款**。
-
-> 使用本插件所造成的任何帳號警告、停權或封禁，**由使用者自行承擔全部責任**，作者不負任何法律或道義責任。
-
-請確保你了解相關風險後再使用。
+| Option | Description | Default |
+| :--- | :--- | :--- |
+| **Anti Mute** | Automatically unmutes when server-muted | ON |
+| **Anti Deafen** | Automatically undeafens when server-deafened | ON |
 
 ---
 
-## 作者
+## ⚠️ Warning
+
+This plugin automates user actions, which is a **violation of the Discord Terms of Service (ToS)**.
+
+> **Use this plugin at your own risk.** The author takes no legal or moral responsibility for any account warnings, suspensions, or bans resulting from the use of this software.
+
+Please ensure you fully understand the risks before proceeding.
+
+---
+
+## Author
 
 **Cody**
