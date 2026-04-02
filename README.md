@@ -1,4 +1,4 @@
-# AntiMuteDeafen
+# [Vencord] AntiMuteDeafen
 
 > A Vencord plugin that automatically reverts server-imposed mutes and deafens.
 
